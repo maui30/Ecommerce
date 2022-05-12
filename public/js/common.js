@@ -12,6 +12,9 @@ const processData = data => {
     loader.style.display = null;
     if(data.alert){
         showFormError(data.alert);
+    }else if(data.name){
+        sessionStorage.user = JSON.stringify(data);
+        location.replace('/');
     }
 }
 
