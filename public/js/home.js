@@ -1,16 +1,32 @@
-const productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
+// navbar
 
-productContainers.forEach((item, i) => {
-    let containerDimenstions = item.getBoundingClientRect();
-    let containerWidth = containerDimenstions.width;
+const navbar = document.querySelector ('.navbar');
 
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
+window.addEventListener('scroll', () =>{
+    if(scrollY >= 180){
+        navbar.classList.add('bg');
+    }else{
+        navbar.classList.remove('bg');
+    }
+})
+
+//image collage
+
+const collageImages = [...document.querySelectorAll('.collage-img')]
+
+collageImages.map((item, i) => {
+    item.addEventListener('mouseover', () =>{
+        collageImages.map((image, index) =>{
+            if(index != i){
+                image.style.filter=`blur(10px)`;
+                item.style.zIndex = 2;
+            }
+        })
     })
 
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
+    item.addEventListener('mouseleave', () =>{
+        collageImages.map((image, index) =>{
+            image.style=null;
+        })
     })
 })

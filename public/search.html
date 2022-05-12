@@ -4,119 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results</title>
-    <link rel="stylesheet" href="css/home.css">
-   <link rel="stylesheet" href="css/search.css">
+    <title>Online Store - Search Results</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
-    <nav class="navbar"></nav>
-
-    <section class="search-results">
-        <h2 class="heading">search results for <span>product</span></h2>
-        <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card1.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
+    <!--navbar-->
+    <nav class="navbar bg">
+        <ul class="links-container">
+            <li class="link-item"><a href="#" class="link active">home</a></li>
+            <li class="link-item"><a href="#" class="link">product</a></li>
+            <li class="link-item"><a href="#" class="link">about</a></li>
+            <li class="link-item"><a href="#" class="link">contact</a></li>
+        </ul>
+        <div class="user-interactions">
+            <div class="cart">
+                <img src="img/cart.png" alt="" class="cart-icon">
+                <span class="cart-item-count"></span>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card2.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card3.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card4.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card5.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card6.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card7.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="img/card8.png" class="product-thumb" alt="">
-                    <button class="card-btn">add to whislist</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <p class="product-short-des">a short line about the cloth..</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span>
-                </div>
+            <div class="user">
+                <img src="img/user.png" alt="" class="user-icon">
             </div>
         </div>
-        
+    </nav>
+
+    <section class="search-listing">
+        <h1 class="section-title">Sofas</h1>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="img/sofa-1.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-2.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-3.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-4.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-5.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-6.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-7.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-8.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-9.png" alt="" class="product-img">
+                <p class="product-price">$499</p>
+            </div>
+          
+        </div>
     </section>
 
-    <footer></footer>
 
-    <script src="js/nav.js"></script>
-    <script src="js/footer.js"></script>
 </body>
 </html>

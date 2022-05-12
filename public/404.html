@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page not found</title>
+    <title>Online Store - Page not found</title>
 
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/404.css">
 </head>
 <body>
-    <nav class="navbar"></nav>
+    <!--navbar-->
+    <nav class="navbar">
+        <ul class="links-container">
+            <li class="link-item"><a href="#" class="link active">home</a></li>
+            <li class="link-item"><a href="#" class="link">product</a></li>
+            <li class="link-item"><a href="#" class="link">about</a></li>
+            <li class="link-item"><a href="#" class="link">contact</a></li>
+        </ul>
+        <div class="user-interactions">
+            <div class="cart">
+                <img src="img/cart-white.png" alt="" class="cart-icon">
+                <span class="cart-item-count"></span>
+            </div>
+            <div class="user">
+                <img src="img/user-white.png" alt="" class="user-icon">
+            </div>
+        </div>
+    </nav>
 
-    <img src="img/404.png" class="four-0-four-image" alt="">
-    <p class="four-0-four-msg">look like you are lost. Head to beack to our <a href="#">homepage</a></p>
-
-    <script src="js/nav.js"></script>
+    <header class="four-0-four-section">
+        <div class="content">
+            <h1 class="error">page does not exists</h1>
+             <p class="sub-line">looks like you are lost. Visit our <a href="#">hompage</a></p>
+        </div>
+    </header>
+    
 </body>
 </html>
