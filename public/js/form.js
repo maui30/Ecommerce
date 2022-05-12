@@ -16,7 +16,7 @@ formBtn.addEventListener('click', () =>{
         showFormError('enter your email');
     }else if(password.value.length < 8){
         showFormError('password must be more than 7 letters log');
-    }else if(number.value.length < 10){
+    }else if(!Number(number) || number.value.length < 10){
         showFormError('Invalid phone number');
     }else if(!tac){
         showFormError('you must agree to our terms and conditions');

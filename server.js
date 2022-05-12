@@ -48,7 +48,7 @@ app.post('/signup', (req, res) => {
        res.json({ 'alert' : 'enter your email'});
     }else if(password.length < 8){
        res.json({ 'alert' : 'password must be more than 7 letters log'});
-    }else if(number.length < 10){
+    }else if(!Number(number) || number.length < 10){
        res.json({ 'alert' : 'Invalid phone number'});
     }else if(!tac){
        res.json({ 'alert' : 'you must agree to our terms and conditions'});
