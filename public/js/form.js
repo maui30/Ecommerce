@@ -12,13 +12,14 @@ let formBtn = document.querySelector('.submit-btn');
 let loader = document.querySelector('.loader');
 
 formBtn.addEventListener('click', () =>{
-    let fullname = document.querySelector('#name');
+    let fullname = document.querySelector('#name') || null;
     let email = document.querySelector('#email');
     let password = document.querySelector ('#password');
-    let number = document.querySelector ('#number');
-    let tac = document.querySelector ('#tc');
+    let number = document.querySelector ('#number') || null;
+    let tac = document.querySelector ('#tc') || null;
 
-   // form validation
+   if(fullname != null){
+       // form validation
     if(fullname.value.length < 3){
         showFormError('name must be 3 letters long');
     }else if(!email.value.length){
@@ -40,4 +41,16 @@ formBtn.addEventListener('click', () =>{
             tac: tac.checked
         })
     }
+   }else{ //login page
+        if(!email.value.length || !password.value.length){
+            showFormError('fill all the inputs')
+        }else{
+            //submit form
+            loader.style.display = 'block';
+            sendData('/login', {
+                email: email.value,
+                password: password.value
+            })
+        }
+   }
 })

@@ -81,6 +81,27 @@ app.post('/signup', (req, res) => {
     }
 })
 
+app.get('/login', (req, res)=>{
+    res.sendFile("login.html", { root : "public"})
+})
+
+app.post('/login', (req, res)=>{
+    let {email, password} = req.body;
+
+    if(!email.length || !password.length){
+        res.json({ 'alert' : 'fill all the inputs'})
+    }
+
+    const users = collection(db, "users");
+
+    getDoc(doc(users, email))
+    .then(user => {
+        if(!user.exists()){
+            return res.json({ 'alert' : 'email does not exists'});
+        }
+    })
+})
+
 //404 route
 app.get('/404', (req, res) => {
     res.sendFile("404.html", {root: "public"})
