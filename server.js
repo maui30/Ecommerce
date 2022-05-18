@@ -98,6 +98,19 @@ app.post('/login', (req, res)=>{
     .then(user => {
         if(!user.exists()){
             return res.json({ 'alert' : 'email does not exists'});
+        }else{
+            bcrypt.compare(password, user.data().password, (err, result) => {
+                if(result){
+                    let data = user.data();
+                    return res.json({
+                        name: data.name,
+                        email: data.email,
+                        seller: data.seller
+                    })
+                }else{
+                    return res.json({ 'alert' : 'password is incorrect'})
+                }
+            })
         }
     })
 })
