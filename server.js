@@ -82,7 +82,7 @@ app.post('/signup', (req, res) => {
 })
 
 app.get('/login', (req, res)=>{
-    res.sendFile("login.html", { root : "public"})
+    res.sendFile(path.join(staticPath, "login.html"));
 })
 
 app.post('/login', (req, res)=>{
