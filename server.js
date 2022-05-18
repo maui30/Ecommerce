@@ -115,6 +115,38 @@ app.post('/login', (req, res)=>{
     })
 })
 
+//seller route
+app.get('/seller', (req, res) => {
+    res.sendFile('seller.html', {root : "public"});
+})
+
+app.post('/seller',(req,res)=>{
+    let {name,address,about,number,email}=req.body;
+
+    if(!businessName.Length){
+       return res.json({ 'alert' : 'Invalid name'});
+    }else if(!address.length ){
+        return res.json({ 'alert' : 'Invalid address'});
+    }else if(!about.Length){
+        return res.json({ 'alert' : 'Invalid about'});
+    }else if(number.length<10||!Number(number)){
+       return res.json({ 'alert' : 'Invalid phone number'});
+    }else{
+        // update the seller status
+        const sellers=collection(db,"sellers");
+        setDoc(doc(sellers,email),req.body)
+        .then(data=>{
+            const users=collection(db,"users");
+            updateDoc(doc(users,email),{
+                seller:true
+            })
+            .then(data=>{
+                res.json({'seller':true})
+            })
+        })
+    }   
+})
+
 //404 route
 app.get('/404', (req, res) => {
     res.sendFile("404.html", {root: "public"})
