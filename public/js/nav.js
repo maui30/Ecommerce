@@ -57,14 +57,10 @@ if(user!= null){ // user is logged in
 }else{
     text.innerHTML = 'login to your account';
     actionBtn.innerHTML = 'login'
-    actionBtn.addEventListener('click', () => login());
+    actionBtn.addEventListener('click', () => location.href = '/login');
 }
 
 const logout = () => {
     sessionStorage.clear();
     location.reload();
-}
-
-const login = () => {
-    document.location.href='login.html',true;
 }
