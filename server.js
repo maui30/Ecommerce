@@ -120,6 +120,11 @@ app.get('/seller', (req, res) => {
     res.sendFile('seller.html', {root : "public"});
 })
 
+app.get('/dashboard.html', (req, res) => {
+    res.sendFile('dashboard.html', {root: "public"});
+})
+
+/*
 app.post('/seller',(req,res)=>{
     let {name,address,about,number,email}=req.body;
 
@@ -145,7 +150,7 @@ app.post('/seller',(req,res)=>{
             })
         })
     }   
-})
+})*/
 
 //404 route
 app.get('/404', (req, res) => {
